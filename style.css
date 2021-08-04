@@ -1,0 +1,165 @@
+@import url('./Dhivehi.ttf');
+@import url('./bismi.ttf');
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.for-print {
+    display: none;
+    font-family: 'Dhivehi';
+}
+
+.container {
+    max-width: 75ch;
+    margin: auto;
+    padding: 1rem 2rem;
+}
+
+label {
+    display: block;
+}
+
+.field-group + .field-group {
+    margin-top: 1.2rem;
+}
+
+input,
+textarea {
+    line-height: 2;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.thaanaKeyboardInput {
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Dhivehi';
+    
+}
+
+.bismi {
+    font-family: 'A_Bismillah';
+    font-size: 2rem;
+    padding: 0.282rem 0.8rem;
+    width: 100%;
+}
+
+#sender-gender {
+    font-family: 'Dhivehi';
+    line-height: 2rem;
+    padding: 0.625rem 0.8rem;
+    width: 100%;
+}
+
+@media print {
+    .container {
+        display: none;
+    }
+
+    .for-print {
+        display: grid;
+        margin-left: 1.5cm;
+        margin-right: 1.5cm;
+    }
+
+    .bismi {
+        display: block;
+        order: 1;
+        text-align: center;
+    }
+
+    .sender-address {
+        margin-top: 2rem;
+        order: 2;
+    }
+
+    .sender-island {
+        order: 3;
+    }
+
+    .subject {
+        font-weight: 900;
+        text-decoration: underline;
+        margin-top: 4rem;
+        margin-right: 6rem;
+        order: 4;
+    }
+
+    .receiver-name {
+        /* margin-top: 2rem; */
+        margin-right: 6rem;
+        order: 5;
+    }
+
+    .message {
+        text-indent: 6rem;
+        order: 6;
+    }
+
+    .letter-date {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-right: 6rem;
+        order: 7;
+        width: max-content;
+    }
+
+        .letter-year {
+            order: 3;
+        }
+
+        .letter-month {
+            order: 2;
+        }
+
+        .letter-day {
+            order: 1;
+        }
+
+
+    .sign {
+        /* background-color: brown; */
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        order: 8;
+        width: 100%;
+        /* text-align: left; */
+    }
+
+        .sign div {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            width: max-content;
+        }
+            .sender-gender {
+                display: block;
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+                text-align: center;
+                /* order: 8; */
+            }
+
+            /* .sender-name {
+                order: 9;
+            } */
+
+    .receiver-address {
+        margin-top: 2rem;
+        order: 9;
+    }
+
+    .receiver-island {
+        order: 10;
+    }
+    
+}
