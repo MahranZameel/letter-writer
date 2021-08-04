@@ -1,5 +1,5 @@
-@import url('./Dhivehi.ttf');
-@import url('./bismi.ttf');
+@import url('Dhivehi.ttf');
+@import url('bismi.ttf');
 
 :root {
     font-size: 16px;
@@ -87,42 +87,70 @@ textarea {
         order: 3;
     }
 
-    .subject {
-        font-weight: 900;
-        text-decoration: underline;
+    .receiver {
         margin-top: 4rem;
         margin-right: 6rem;
         order: 4;
     }
 
+    .greeting {
+        margin-right: 6rem;
+        margin-top: 1rem;
+        order: 5;
+    }
+
+    /* .receiver-title {
+        margin-right: 6rem;
+        order: 4;
+    }
+
     .receiver-name {
-        /* margin-top: 2rem; */
+        margin-top: 2rem;
         margin-right: 6rem;
         order: 5;
+    } */
+
+    .subject {
+        font-weight: 900;
+        text-decoration: underline;
+        margin-top: 1rem;
+        /* margin-right: 6rem; */
+        order: 6;
     }
 
     .message {
         text-indent: 6rem;
-        order: 6;
+        order: 7;
     }
 
-    .letter-date {
+    .farewell {
+        margin-top: 1rem;
+        text-indent: 6rem;
+        order: 8;
+    }
+
+    .letter-date,
+    .hijri-date {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto;
         margin-right: 6rem;
-        order: 7;
+        order: 9;
         width: max-content;
     }
 
-        .letter-year {
+        .letter-year,
+        .hijri-year {
             order: 3;
         }
 
-        .letter-month {
+        .letter-month,
+        .hijri-month {
             order: 2;
+            padding: 0 1ch;
         }
 
-        .letter-day {
+        .letter-day,
+        .hijri-day {
             order: 1;
         }
 
@@ -131,7 +159,7 @@ textarea {
         /* background-color: brown; */
         display: grid;
         grid-template-columns: 1fr max-content;
-        order: 8;
+        order: 10;
         width: 100%;
         /* text-align: left; */
     }
@@ -155,11 +183,11 @@ textarea {
 
     .receiver-address {
         margin-top: 2rem;
-        order: 9;
+        order: 11;
     }
 
     .receiver-island {
-        order: 10;
+        order: 12;
     }
     
 }

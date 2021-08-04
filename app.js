@@ -2,7 +2,7 @@ function updateValues(id, value) {
     var elements = document.getElementsByClassName(id);
 
     if(id=="sender-island") {
-        elements[1].innerHTML = value + "،" + " " + "ދިވެހިރާއްޖެ";
+        elements[1].innerHTML = value + "،" + "<br>" + "ދިވެހިރާއްޖެ";
     } else if(id=="receiver-island") {
         elements[1].innerHTML = value + "،" + " " + "ދިވެހިރާއްޖެ";
     } else {
@@ -21,7 +21,7 @@ function updateDates(value) {
 
     fetch('http://api.aladhan.com/v1/gToH?date='+letterDay+'-'+letterMonth+'-'+letterYear)
     .then(response => response.json())
-    .then(data => arabicDate(data));
+    .then(data => hijriDate(data));
 
     switch (letterMonth) {
         case '01':
@@ -83,61 +83,65 @@ function updateDates(value) {
     
 }
 
-function arabicDate(dateValue) {
-    arabicYear = dateValue.data.hijri.year;
-    arabicMonth = dateValue.data.hijri.month.number;
-    arabicDay = dateValue.data.hijri.day;
+function hijriDate(dateValue) {
+    hijriYear = dateValue.data.hijri.year;
+    hijriMonth = dateValue.data.hijri.month.number;
+    hijriDay = dateValue.data.hijri.day;
 
-    switch (arabicMonth) {
+    switch (hijriMonth) {
         case 1:
-            arabicMonth = 'މުހައްރަމް';
+            hijriMonth = 'މުޙައްރަމް';
             break;
 
         case 2:
-            arabicMonth = 'ސަފަރް';
+            hijriMonth = 'ޞަފަރު';
             break;
 
         case 3:
-            arabicMonth = 'ރަބިއުލް-އައްވަލް';
+            hijriMonth = 'ރަބީޢުލްއައްވަލް';
             break;
 
         case 4:
-            arabicMonth = 'ރަބިއުލް-އާހިރް';
+            hijriMonth = 'ރަބީޢުލްއާޚިރު';
             break;
 
         case 5:
-            arabicMonth = 'ޖުމާދަލް-އޫލާ';
+            hijriMonth = 'ޖުމާދަލްއޫލާ';
             break;
 
         case 6:
-            arabicMonth = 'ޖުމާދަލް-އާހިރް';
+            hijriMonth = 'ޖުމާދަލްއާޚިރާ';
             break;
 
         case 7:
-            arabicMonth = 'ރަޖަބް';
+            hijriMonth = 'ރަޖަބް';
             break;
 
         case 8:
-            arabicMonth = 'ޝައުބާން';
+            hijriMonth = 'ޝަޢުބާން';
             break;
 
         case 9:
-            arabicMonth = 'ރަމަޒާން';
+            hijriMonth = 'ރަމަޟާން';
             break;
 
         case 10:
-            arabicMonth = 'ޝައްވާލް';
+            hijriMonth = 'ޝައްވާލް';
             break;
 
         case 11:
-            arabicMonth = 'ޒުލް-ޤައިދާ';
+            hijriMonth = 'ޛުލްޤަޢިދާ';
             break;
 
         case 12:
-            arabicMonth = 'ޒުލް-ހިއްޖަ';
+            hijriMonth = 'ޛުލްޙިއްޖާ';
             break;
                 
     }
 
-    console.log(arabicMonth);
+    document.getElementsByClassName('hijri-year')[0].innerHTML = hijriYear;
+    document.getElementsByClassName('hijri-month')[0].innerHTML = hijriMonth;
+    document.getElementsByClassName('hijri-day')[0].innerHTML = hijriDay;
+
+    // console.log(arabicMonth);
 }

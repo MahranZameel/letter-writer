@@ -69,7 +69,12 @@
         </div>
 
         <div class="field-group">
-            <label for="sender-name">Receiver name</label>
+            <label for="receiver-title">Receiver title</label>
+            <input type="text" title="receiver-title" id="receiver-title" class="receiver-title thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+        </div>
+
+        <div class="field-group">
+            <label for="receiver-name">Receiver name</label>
             <input type="text" name="receiver-name" id="receiver-name" class="receiver-name thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
         </div>
 
@@ -107,11 +112,21 @@
         <span class="sender-address"></span>
         <span class="sender-island"></span>
 
+        
+        <div class="receiver">
+            <span class="receiver-title"></span>
+            <span class="receiver-name"></span>
+            <span>އަށް.</span>
+        </div>
+        
+
+        <span class="greeting">ވެދުން ސަލާމައްފަހު ދަންނަވަމެވެ.</span>
+
         <span class="subject"></span>
 
-        <span class="receiver-name"></span>
-
         <div class="message"></div>
+
+        <span class="farewell">އިޙްތިރާމް ޤަބޫލުކުރެއްވުން އެދެމެވެ.</span>
 
         <span class="letter-date">
             <span class="letter-year"></span>
