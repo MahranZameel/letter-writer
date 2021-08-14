@@ -2,9 +2,9 @@ function updateValues(id, value) {
     var elements = document.getElementsByClassName(id);
 
     if(id=="sender-island") {
-        elements[1].innerHTML = value + "،" + "<br>" + "ދިވެހިރާއްޖެ";
+        elements[1].innerHTML = value + "،" + "<br>" + "ދިވެހިރާއްޖެ.";
     } else if(id=="receiver-island") {
-        elements[1].innerHTML = value + "،" + " " + "ދިވެހިރާއްޖެ";
+        elements[1].innerHTML = value + "،" + "<br>" + "ދިވެހިރާއްޖެ.";
     } else {
         elements[1].innerHTML = value;
     }
