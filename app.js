@@ -19,7 +19,7 @@ function updateDates(value) {
     var letterMonth = letterDate.substring(5,7);
     var letterDay = letterDate.substring(8,10);
 
-    fetch('http://api.aladhan.com/v1/gToH?date='+letterDay+'-'+letterMonth+'-'+letterYear)
+    fetch('https://api.aladhan.com/v1/gToH?date='+letterDay+'-'+letterMonth+'-'+letterYear)
     .then(response => response.json())
     .then(data => hijriDate(data));
 

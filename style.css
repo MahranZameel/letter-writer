@@ -1,5 +1,22 @@
-@import url('Dhivehi.ttf');
-@import url('bismi.ttf');
+@font-face {
+    font-family: 'A_Bismillah';
+    src: local('A_Bismillah'),
+        url('A_Bismillah.woff2') format('woff2'),
+        url('A_Bismillah.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dhivehi';
+    src: local('Dhivehi'),
+        url('Dhivehi.woff2') format('woff2'),
+        url('Dhivehi.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
 
 :root {
     font-size: 16px;
@@ -173,13 +190,13 @@ textarea {
         grid-template-columns: 1fr max-content;
         order: 9;
         width: 100%;
-        /* text-align: left; */
     }
 
         .sign div {
             grid-column-start: 2;
             grid-column-end: 3;
             width: max-content;
+            /* text-align: center; */
         }
             .sender-gender {
                 display: block;
@@ -189,9 +206,11 @@ textarea {
                 /* order: 8; */
             }
 
-            /* .sender-name {
-                order: 9;
-            } */
+            .sender-name {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
 
     .receive-address {
         margin-top: 2rem;
