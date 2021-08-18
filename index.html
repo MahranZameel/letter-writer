@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container dhivehi">
         <div class="field-group bismi-options">
-            <label for="bismi">Choose a bismi</label>
+            <label for="bismi">ބިސްމިއެއް ޚިޔާރު ކުރައްވާ</label>
             <select class="bismi" name="bismi" id="bismi" onchange="updateValues(this.id, this.value)">
                 <option value=""></option>
                 <option value="a">a</option>
@@ -40,66 +40,79 @@
             </select>
         </div>
 
-        <div class="field-group">
-            <label for="sender-gender">Sender gender</label>
-            <select class="sender-gender" name="sender-gender" id="sender-gender" onchange="updateValues(this.id, this.value)">
-                <option value=""></option>
-                <option value="ޚާދިމުކުމް">
-                    ޚާދިމުކުމް
-                </option>
-                <option value="ޚާދިމަތުކުމް">
-                    ޚާދިމަތުކުމް
-                </option>
-            </select>
+        
+
+        <div class="sender-info">
+            <h3 class="group-heading">ފޮނުވާ ފަރާތުގެ މައުލޫމާތު</h3>
+
+            <div class="field-group">
+                <label for="sender-gender">ޖިންސު</label>
+                <select class="sender-gender" name="sender-gender" id="sender-gender" onchange="updateValues(this.id, this.value)">
+                    <option value=""></option>
+
+                    <option value="ޚާދިމަތުކުމް">
+                        އަންހެން
+                    </option>
+
+                    <option value="ޚާދިމުކުމް">
+                        ފިރިހެން
+                    </option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="sender-name">ނަން</label>
+                <input type="text" name="sender-name" id="sender-name" class="sender-name thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+            </div>
+    
+            <div class="field-group">
+                <label for="sender-address">އެޑްރެސް</label>
+                <input type="text" name="sender-address" id="sender-address" class="sender-address thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+            </div>
+    
+            <div class="field-group">
+                <label for="sender-island">ރަށް</label>
+                <input type="text" name="sender-island" id="sender-island" class="sender-island thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+            </div>
         </div>
+        
+        <div class="sender-info">
+            <h3 class="group-heading">ރައްދު ފަރާތުގެ މައުލޫމާތު</h3>
+
+            <div class="field-group">
+                <label for="receiver-title">Receiver title</label>
+                <input type="text" title="receiver-title" id="receiver-title" class="receiver-title thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+            </div>
+    
+            <div class="field-group">
+                <label for="receiver-name">ނަން</label>
+                <input type="text" name="receiver-name" id="receiver-name" class="receiver-name thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+            </div>
+    
+            <div class="field-group">
+                <label for="receiver-address">އެޑްރެސް</label>
+                <input type="text" name="receiver-address" id="receiver-address" class="receiver-address thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+            </div>
+    
+            <div class="field-group">
+                <label for="receiver-island">ރަށް</label>
+                <input type="text" name="receiver-island" id="receiver-island" class="receiver-island thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
+            </div>
+        </div>
+        
 
         <div class="field-group">
-            <label for="sender-name">Sender name</label>
-            <input type="text" name="sender-name" id="sender-name" class="sender-name thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
-        </div>
-
-        <div class="field-group">
-            <label for="sender-address">Sender address</label>
-            <input type="text" name="sender-address" id="sender-address" class="sender-address thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
-        </div>
-
-        <div class="field-group">
-            <label for="sender-island">Sender island</label>
-            <input type="text" name="sender-island" id="sender-island" class="sender-island thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
-        </div>
-
-        <div class="field-group">
-            <label for="receiver-title">Receiver title</label>
-            <input type="text" title="receiver-title" id="receiver-title" class="receiver-title thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
-        </div>
-
-        <div class="field-group">
-            <label for="receiver-name">Receiver name</label>
-            <input type="text" name="receiver-name" id="receiver-name" class="receiver-name thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
-        </div>
-
-        <div class="field-group">
-            <label for="receiver-address">Receiver address</label>
-            <input type="text" name="receiver-address" id="receiver-address" class="receiver-address thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
-        </div>
-
-        <div class="field-group">
-            <label for="receiver-island">Receiver island</label>
-            <input type="text" name="receiver-island" id="receiver-island" class="receiver-island thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
-        </div>
-
-        <div class="field-group">
-            <label for="letter-date">Date</label>
+            <label for="letter-date">ތާރީޚް</label>
             <input type="date" name="letter-date" id="letter-date" class="letter-date" onblur="updateDates(this.value)">
         </div>
 
         <div class="field-group">
-            <label for="subject">Subject</label>
+            <label for="subject">މައުލޫ</label>
             <input type="text" name="subject" id="subject" class="subject thaanaKeyboardInput" onblur="updateValues(this.id, this.value)">
         </div>
 
         <div class="field-group">
-            <label for="message">Message</label>
+            <label for="message">މައިގަނޑު</label>
             <textarea name="message" id="message" class="message thaanaKeyboardInput" onblur="updateValues(this.id, this.value)"></textarea>
         </div>
 

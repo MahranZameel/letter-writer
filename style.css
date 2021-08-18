@@ -37,6 +37,10 @@
     padding: 1rem 2rem;
 }
 
+.dhivehi {
+    font-family: 'Dhivehi';
+}
+
 label {
     display: block;
 }
